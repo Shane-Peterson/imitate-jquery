@@ -4,14 +4,14 @@
 
 创建新元素
 
+```javascript
+$('<div><span>1</span></div>') 
+```
+
 复制元素
 
 ```javascript
 $div.clone()
-```
-
-```javascript
-$('<div><span>1</span></div>') 
 ```
 
 删除节点

@@ -1,6 +1,6 @@
 # 事件操作
 
-![event](../images/edit.png)
+![event](../images/event.jpg)
 
 添加事件监听
 

@@ -1,6 +1,6 @@
 # 元素的移动
 
-![move](../images/edit.png)
+![move](../images/move.jpg)
 
 把新增的元素放到另一个元素里
 
