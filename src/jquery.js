@@ -116,7 +116,7 @@ $.fn = $.prototype = {
     }
     return this
   },
-  clone(){
+  clone() {
     let array = []
     this.each((element) => {
       array.push(element.cloneNode(true))
@@ -316,6 +316,21 @@ $.fn = $.prototype = {
   off(eventName, fn) {
     this.each((element) => {
       element.removeEventListener(eventName, fn)
+    })
+    return this
+  },
+  delegate(eventType, selector, fn) {
+    const element = this.elements[0]
+    element.addEventListener(eventType, (e) => {
+      let target = e.target
+      while (!target.matches(selector)) {
+        if (element === target) {
+          target = null
+          break
+        }
+        target = target.parentNode
+      }
+      target && fn.call(target, e, target)
     })
     return this
   },
